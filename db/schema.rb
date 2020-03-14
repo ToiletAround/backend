@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 2020_03_14_174217) do
     t.index ["toilet_id"], name: "index_prices_on_toilet_id"
   end
 
+  create_table "resources", force: :cascade do |t|
+    t.string "name"
+    t.bigint "toilet_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["toilet_id"], name: "index_resources_on_toilet_id"
+  end
+
   create_table "toilets", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
