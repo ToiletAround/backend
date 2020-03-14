@@ -8,8 +8,8 @@ default: &default
 development:
   <<: *default
   database: <%= ENV['DB_NAME'] %>
-  host: <%= ENV['HOST'] %>
-  port: <%= ENV['PORT'] %>
+  host: <%= ENV['DB_URL'] %>
+  port: <%= ENV['DB_PORT'] %>
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASS'] %>
 
@@ -69,7 +69,7 @@ test:
 production:
   <<: *default
   database: <%= ENV['DB_NAME'] %>
-  host: <%= ENV['HOST'] %>
-  port: <%= ENV['PORT'] %>
+  host: <%= ENV['DB_URL'] %>
+  port: <%= ENV['DB_PORT'] %>
   username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['DB_PASS'] %>
