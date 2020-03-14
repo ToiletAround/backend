@@ -40,7 +40,7 @@ class Api::V1::LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:latitude, :longitude, :toilet_id)
+    paramss.permit(:latitude, :longitude, :toilet_id)
   end
 
   def find_location

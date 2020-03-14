@@ -7,11 +7,11 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>
-  host: <%= ENV['DB_URL'] %>
-  port: <%= ENV['DB_PORT'] %>
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASS'] %>
+  database: toiletaround
+  host: 134.209.200.48
+  port: 15432
+  username: ruben
+  password: rubennebur
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

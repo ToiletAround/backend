@@ -49,7 +49,7 @@ class Api::V1::ToiletsController < ApplicationController
   private
 
   def toilet_params
-    params.require(:toilet).permit(:name)
+    params.permit(:name)
   end
 
 end
