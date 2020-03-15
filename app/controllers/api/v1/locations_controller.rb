@@ -17,6 +17,8 @@ class Api::V1::LocationsController < ApplicationController
     else
       render json: { error: 'Unable to create location' }, status: 400
     end
+  rescue StandardError
+    render json: { error: 'Unable to create location' }, status: 400
   end
 
   def update
