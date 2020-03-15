@@ -40,7 +40,7 @@ class Api::V1::PricesController < ApplicationController
   private
 
   def price_params
-    params.permit(:price, :toilet_id)
+    params.require([:price, :toilet_id])
   end
 
   def find_price

@@ -40,7 +40,7 @@ class Api::V1::ResourcesController < ApplicationController
   private
 
   def resource_params
-    params.permit(:name, :toilet_id)
+    params.require([:name,:toilet_id])
   end
 
   def find_resource

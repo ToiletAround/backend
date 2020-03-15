@@ -40,7 +40,7 @@ class Api::V1::SchedulesController < ApplicationController
   private
 
   def schedule_params
-    params.permit(:start, :end, :toilet_id)
+    params.require([:start, :end, :toilet_id])
   end
 
   def find_schedule
